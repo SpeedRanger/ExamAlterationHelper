@@ -139,19 +139,19 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
             StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
                 @Override
                 public void onResponse(String response) {
-                    pass_username=str_username.toString();
-                    pass_password=str_password.toString();
+                    pass_username = str_username;
+                    pass_password = str_password;
                     global.username=pass_username;
                     global.password=pass_password;
 //                    progressDialog.dismiss();
                     ed_username.setText("");
                     ed_password.setText("");
 //                    startActivity(new Intent(getApplicationContext(),MainActivity.class));
-                    String s = new String(response.trim());
+                    String s = response.trim();
                     if(s.equals("success")){
                         Toast.makeText(MainActivity.this, "login successful", Toast.LENGTH_LONG).show();
-                        SmsManager sms = SmsManager.getDefault();
-                        sms.sendTextMessage("+919550894392", null, "Welcome User.", null, null);
+//                        SmsManager sms = SmsManager.getDefault();
+//                        sms.sendTextMessage("+919550894392", null, "Welcome User.", null, null);
                         startActivity(new Intent(getApplicationContext(),admin_pg.class));
                     }
                     if(s.equals("failed")){

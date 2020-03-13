@@ -16,10 +16,10 @@ public class global_testTest {
         assertEquals(global_test.test_password("fac001"),true);
     }
 
-    @Test
-    public void test_details(){
-        assertEquals(global_test.test_udetails2("asd","as","asd","asd","asd"),true); ;
-    }
+//    @Test
+//    public void test_details(){
+//        assertEquals(global_test.test_udetails2("asd","as","asd","asd","asd"),true); ;
+//    }
 
     @Test
     public void test_updatett(){
