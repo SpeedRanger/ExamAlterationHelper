@@ -38,4 +38,4 @@ before_script:
   - mkdir -p "$ANDROID_HOME/licenses"
   - cp ./google-licenses/* "$ANDROID_HOME/licenses/"
 script:
-  - ./gradlew clean build connectedCheck --stacktrace
+  - ./gradlew clean build check --stacktrace
