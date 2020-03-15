@@ -97,7 +97,7 @@ public class admin_pg extends AppCompatActivity
         } else if (id == R.id.nav_report) {
             String subs = global.username.substring(0, 9);
             if (subs.equals("cb.en.fac")) {
-                startActivity(new Intent(getApplicationContext(), register_fac.class));
+                startActivity(new Intent(getApplicationContext(), report_gen.class));
             }
         } else if (id == R.id.nav_send) {
 

@@ -189,4 +189,8 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
         }
     }
 
+    public void forgot_password(View view) {
+        startActivity(new Intent(getApplicationContext(), forgot_password.class));
+    }
+
 }
