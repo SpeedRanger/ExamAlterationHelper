@@ -21,6 +21,7 @@ android:
 
 before_install:
   - touch $HOME/.android/repositories.cfg
+  - pip install --user codecov
 
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
@@ -37,3 +38,6 @@ before_script:
 
 script:
   - ./gradlew clean build
+
+after_success:
+  - codecov
