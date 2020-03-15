@@ -20,6 +20,7 @@ public class ListAdapterClass extends ArrayAdapter<subjects> {
         super(view_timetable, 0, deptList);
     }
 
+
     @Override
     public int getCount() {
         return super.getCount();
