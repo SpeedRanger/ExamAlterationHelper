@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient1"
+    tools:context=".report_gen">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="REPORT"
+        android:textSize="40dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#0f0f0f"
+        android:fontFamily="sans-serif"
+        android:paddingTop="30dp"
+        android:id="@+id/report_title" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter your report here"
+        android:layout_below="@+id/report_title"
+        android:paddingTop="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:id="@+id/ed_report" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send Report"
+        android:layout_below="@+id/ed_report"
+        android:layout_centerHorizontal="true"
+        android:onClick="send_report"
+        android:id="@+id/report_btn" />
+
+</RelativeLayout>

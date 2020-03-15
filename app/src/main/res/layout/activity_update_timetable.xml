@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient1"
     tools:context=".update_timetable">
 
     <ImageView
@@ -14,14 +15,16 @@
         android:id="@+id/update_timetable_clipart"
         android:layout_centerHorizontal="true"
         />
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/update_tt_card"
-        android:layout_below="@+id/update_timetable_clipart"
-        >
+    <!--<android.support.v7.widget.CardView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:id="@+id/update_tt_card"-->
+    <!--android:layout_below="@+id/update_timetable_clipart"-->
+    <!--&gt;-->
 
         <RelativeLayout
+            android:background="@drawable/gradient1"
+            android:layout_below="@+id/update_timetable_clipart"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             >
@@ -71,7 +74,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/block_edit"
                 android:layout_toRightOf="@+id/blocktext"
-                android:layout_marginTop="7dp"
+                android:layout_marginTop="15dp"
                 />
             <TextView
                 android:text=""
@@ -80,6 +83,7 @@
                 android:id="@+id/room_edit"
                 android:layout_toRightOf="@+id/roomtext"
                 android:layout_below="@+id/blocktext"
+                android:layout_marginTop="15dp"
                 />
             <TextView
                 android:text=""
@@ -88,6 +92,7 @@
                 android:id="@+id/time_edit"
                 android:layout_toRightOf="@+id/timetext"
                 android:layout_below="@+id/roomtext"
+                android:layout_marginTop="15dp"
                 />
             <EditText
                 android:hint="NAME"
@@ -96,6 +101,7 @@
                 android:id="@+id/name_edit"
                 android:layout_toRightOf="@+id/nametext"
                 android:layout_below="@+id/timetext"
+                android:layout_marginTop="15dp"
                 />
             <Button
                 android:layout_width="wrap_content"
@@ -115,6 +121,5 @@
 
         </RelativeLayout>
 
-    </android.support.v7.widget.CardView>
 
 </RelativeLayout>

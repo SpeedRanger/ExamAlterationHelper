@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient1"
     tools:context=".select_exam_date">
 
 <Spinner
@@ -14,7 +15,6 @@
     android:layout_centerHorizontal="true"
     >
 </Spinner>
-
         <Button
             android:id="@+id/proceed_date"
             android:layout_width="match_parent"
