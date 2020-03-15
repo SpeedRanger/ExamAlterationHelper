@@ -74,5 +74,34 @@ public class NavBarTest {
         onView(withId(R.id.proceed_date)).check(matches(isDisplayed()));
     }
 
+    @Test
+    public void clickOnYourNavigationItem_RequestsReceived() {
+        // Open Drawer to click on navigation.
+        onView(withId(R.id.drawer_layout))
+                .check(matches(isClosed(Gravity.LEFT))) // Left Drawer should be closed.
+                .perform(DrawerActions.open()); // Open Drawer
+
+        // Start the screen of your activity.
+        onView(withId(R.id.nav_view))
+                .perform(NavigationViewActions.navigateTo(R.id.nav_rcvd_req));
+
+        // Check that you Activity was opened.
+        onView(withId(R.id.req_title)).check(matches(isDisplayed()));
+    }
+
+    @Test
+    public void clickOnYourNavigationItem_RequestAlteration() {
+        // Open Drawer to click on navigation.
+        onView(withId(R.id.drawer_layout))
+                .check(matches(isClosed(Gravity.LEFT))) // Left Drawer should be closed.
+                .perform(DrawerActions.open()); // Open Drawer
+
+        // Start the screen of your activity.
+        onView(withId(R.id.nav_view))
+                .perform(NavigationViewActions.navigateTo(R.id.nav_rcvd_req));
+
+        // Check that you Activity was opened.
+        onView(withId(R.id.req_title)).check(matches(isDisplayed()));
+    }
 
 }
