@@ -39,6 +39,7 @@ cache:
 before_script:
   - chmod +x gradlew
   - android list targets
+  - android list sdk --no-ui --all --extended
   - echo no | android create avd --force -n test -t $ANDROID_TARGET --abi $ANDROID_ABI
   - emulator -avd test -no-skin -no-audio -no-window &
   - android-wait-for-emulator
