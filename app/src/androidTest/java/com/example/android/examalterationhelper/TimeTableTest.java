@@ -42,4 +42,5 @@ public class TimeTableTest {
         onData(allOf(is(instanceOf(String.class)),is("15-10-2019"))).perform(click());
 
     }
+
 }
