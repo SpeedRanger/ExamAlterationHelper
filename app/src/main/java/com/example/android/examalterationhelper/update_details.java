@@ -25,11 +25,11 @@ public class update_details extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_details);
         progressDialog = new ProgressDialog(this);
-        us=(EditText) findViewById(R.id.up_us);
-        ps=(EditText) findViewById(R.id.up_ps);
-        nm=(EditText) findViewById(R.id.up_nm);
-        pn=(EditText) findViewById(R.id.up_pn);
-        emi=(EditText) findViewById(R.id.up_emi);
+        us = findViewById(R.id.up_us);
+        ps = findViewById(R.id.up_ps);
+        nm = findViewById(R.id.up_nm);
+        pn = findViewById(R.id.up_pn);
+        emi = findViewById(R.id.up_emi);
 //        progressDialog.setMessage("Please Wait");
 //        progressDialog.show();
         display();
@@ -62,7 +62,7 @@ public class update_details extends AppCompatActivity{
 
             @Override
             public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
-
+                //Write test cases for failure
             }
         });
     }
@@ -99,7 +99,7 @@ public class update_details extends AppCompatActivity{
 
             @Override
             public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
-
+                //Write cases for Failure
             }
         });
     }

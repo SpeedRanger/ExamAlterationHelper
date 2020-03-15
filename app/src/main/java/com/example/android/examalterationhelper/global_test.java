@@ -8,43 +8,23 @@ public class global_test {
     public static String run,rps,remi,rphno,rnm;
 
     public static Boolean test_username(String username){
-        if(username.length()>0 && usernamecheck(username)==true){
-            return true;
-        }
-        return false;
+        return username.length() > 0 && usernamecheck(username) == true;
     }
 
     public static Boolean test_password(String password){
-        if(password.length()>0){
-            return true;
-        }
-        return false;
+        return password.length() > 0;
     }
 
     public static Boolean usernamecheck(String username){
-        if(username.substring(0,9).equals("cb.en.adm")||username.substring(0,9).equals("cb.en.fac")){
-            return true;
-        }
-        else
-            return false;
+        return username.substring(0, 9).equals("cb.en.adm") || username.substring(0, 9).equals("cb.en.fac");
     }
 
     public static Boolean test_udetails(String uun,String ups,String unm,String uemi,String uphno){
-        if(uun.length()>0 && ups.length()>0 && unm.length()>0 && uemi.length()>0 && uphno.length()>0 && usernamecheck(uun) && checkphno(uphno)){
-            return true;
-        }
-        else {
-            return false;
-        }
+        return uun.length() > 0 && ups.length() > 0 && unm.length() > 0 && uemi.length() > 0 && uphno.length() > 0 && usernamecheck(uun) && checkphno(uphno);
     }
 
     public static Boolean test_udetails2(String uun,String ups,String unm,String uemi,String uphno){
-        if(uun.length()>0 && ups.length()>0 && unm.length()>0 && uemi.length()>0 && uphno.length()>0 && usernamecheck(uun) && checkphno(uphno)){
-            return true;
-        }
-        else {
-            return false;
-        }
+        return uun.length() > 0 && ups.length() > 0 && unm.length() > 0 && uemi.length() > 0 && uphno.length() > 0 && usernamecheck(uun) && checkphno(uphno);
     }
 
     public static Boolean checkphno(String phno){
@@ -57,12 +37,7 @@ public class global_test {
         if(phno.length()!=10){
             flag=1;
         }
-        if(flag==0){
-            return true;
-        }
-        else{
-            return false;
-        }
+        return flag == 0;
     }
 
     public static Boolean check_utimetable(String block,String room, String uname,String utime){
@@ -79,11 +54,7 @@ public class global_test {
         else{
             flag = 1;
         }
-        if(flag==0){
-            return true;
-        }
-        else{
-            return false;
-        }
+        return flag == 0;
     }
+
 }

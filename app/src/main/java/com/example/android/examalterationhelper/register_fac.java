@@ -52,7 +52,7 @@ public class register_fac extends AppCompatActivity {
         ed_phno1 = findViewById(R.id.phno);
         ed_name1 = findViewById(R.id.ed_name);
 
-        saveLoginCheckBox=(CheckBox)findViewById(R.id.checkbox);
+        saveLoginCheckBox = findViewById(R.id.checkbox);
         loginPreferences = getSharedPreferences("loginPrefs", MODE_PRIVATE);
         loginPrefsEditor = loginPreferences.edit();
 
@@ -97,4 +97,5 @@ public class register_fac extends AppCompatActivity {
                 });
 
     }
+
 }
