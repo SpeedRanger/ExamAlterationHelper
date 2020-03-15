@@ -97,7 +97,69 @@ public class RequestsReceived {
         TimeUnit.MILLISECONDS.sleep(5000);
 
         ViewInteraction textView = onView(
-                allOf(withId(R.id.req_title), withText("REQUESTS RECIEVED"),
+                allOf(withId(R.id.req_title),
+                        isDisplayed()));
+        textView.check(matches(isDisplayed()));
+    }
+
+    @Test
+    public void RequestAlteration() throws InterruptedException {
+        ViewInteraction appCompatEditText = onView(
+                allOf(withId(R.id.username_input),
+                        childAtPosition(
+                                childAtPosition(
+                                        withClassName(is("android.widget.ScrollView")),
+                                        0),
+                                3)));
+        appCompatEditText.perform(scrollTo(), replaceText("cb.en.fac001"), closeSoftKeyboard());
+
+        ViewInteraction appCompatEditText2 = onView(
+                allOf(withId(R.id.password_input1),
+                        childAtPosition(
+                                childAtPosition(
+                                        withClassName(is("android.widget.ScrollView")),
+                                        0),
+                                5)));
+        appCompatEditText2.perform(scrollTo(), replaceText("fac001"), closeSoftKeyboard());
+
+//        pressBack();
+
+        ViewInteraction appCompatButton = onView(
+                allOf(withId(R.id.login), withText("Login"),
+                        childAtPosition(
+                                childAtPosition(
+                                        withClassName(is("android.widget.ScrollView")),
+                                        0),
+                                7)));
+        appCompatButton.perform(scrollTo(), click());
+
+        TimeUnit.MILLISECONDS.sleep(5000);
+
+        ViewInteraction appCompatImageButton = onView(
+                allOf(withContentDescription("Open navigation drawer"),
+                        childAtPosition(
+                                allOf(withId(R.id.toolbar),
+                                        childAtPosition(
+                                                withClassName(is("android.support.design.widget.AppBarLayout")),
+                                                0)),
+                                1),
+                        isDisplayed()));
+        appCompatImageButton.perform(click());
+
+        ViewInteraction navigationMenuItemView = onView(
+                allOf(childAtPosition(
+                        allOf(withId(R.id.design_navigation_view),
+                                childAtPosition(
+                                        withId(R.id.nav_view),
+                                        0)),
+                        2),
+                        isDisplayed()));
+        navigationMenuItemView.perform(click());
+
+        TimeUnit.MILLISECONDS.sleep(5000);
+
+        ViewInteraction textView = onView(
+                allOf(withId(R.id.time_txt), withText("Time"),
                         childAtPosition(
                                 childAtPosition(
                                         withId(android.R.id.content),
