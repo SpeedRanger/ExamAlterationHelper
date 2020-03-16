@@ -31,4 +31,34 @@ public class global_testTest {
         assertEquals(global_test.test_udetails("cb.en.fac001","fac001","fac001","fac001@gmail.com","9876543210"),true);
     }
 
+    @Test
+    public void test_updatefailtt() {
+        assertEquals(global_test.check_utimetable("", "C-302", "fac001", "AN"), false);
+    }
+
+    @Test
+    public void test_failreg_details() {
+        assertEquals(global_test.test_udetails("", "fac001", "fac001", "fac001@gmail.com", "9876543210"), false);
+    }
+
+    @Test
+    public void test_fail2reg_details() {
+        assertEquals(global_test.test_udetails("cb.en.fac001", "", "fac001", "fac001@gmail.com", "9876543210"), false);
+    }
+
+    @Test
+    public void test_fail3reg_details() {
+        assertEquals(global_test.test_udetails("cb.en.fac001", "fac001", "", "fac001@gmail.com", "9876543210"), false);
+    }
+
+    @Test
+    public void test_fail4reg_details() {
+        assertEquals(global_test.test_udetails("cb.en.fac001", "fac001", "fac001", "abcd@gail.com", "9876543210"), false);
+    }
+
+    @Test
+    public void test_fail5reg_details() {
+        assertEquals(global_test.test_udetails("cb.en.fac001", "fac001", "fac001", "fac001@gmail.com", "987654"), false);
+    }
+
 }

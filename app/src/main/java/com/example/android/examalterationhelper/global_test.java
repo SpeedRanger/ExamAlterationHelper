@@ -20,7 +20,7 @@ public class global_test {
     }
 
     public static Boolean test_udetails(String uun,String ups,String unm,String uemi,String uphno){
-        return uun.length() > 0 && ups.length() > 0 && unm.length() > 0 && uemi.length() > 0 && uphno.length() > 0 && usernamecheck(uun) && checkphno(uphno);
+        return uun.length() > 0 && ups.length() > 0 && unm.length() > 0 && uemi.length() > 0 && uphno.length() > 0 && usernamecheck(uun) && checkphno(uphno) && checkmail(uemi);
     }
 
     public static Boolean test_udetails2(String uun,String ups,String unm,String uemi,String uphno){
@@ -55,6 +55,12 @@ public class global_test {
             flag = 1;
         }
         return flag == 0;
+    }
+
+    public static boolean checkmail(String emi) {
+        int len = emi.length();
+        String temp = emi.substring(len - 10, len);
+        return temp.equals("@gmail.com");
     }
 
 }
