@@ -110,11 +110,11 @@ public class admin_pg extends AppCompatActivity
 
         }
         else if(id == R.id.nav_reg){
-            if (global.username.equals("cb.en.adm001")) {
+//            if (global.username.equals("cb.en.adm001")) {
                 startActivity(new Intent(getApplicationContext(), register_fac.class));
-            } else {
-                Toast.makeText(admin_pg.this, "Only admins can access this.", Toast.LENGTH_SHORT).show();
-            }
+//            } else {
+//                Toast.makeText(admin_pg.this, "Only admins can access this.", Toast.LENGTH_SHORT).show();
+//            }
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
