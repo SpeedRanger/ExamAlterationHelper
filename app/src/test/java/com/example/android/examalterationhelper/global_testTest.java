@@ -30,4 +30,5 @@ public class global_testTest {
     public void test_reg_details(){
         assertEquals(global_test.test_udetails("cb.en.fac001","fac001","fac001","fac001@gmail.com","9876543210"),true);
     }
+
 }
